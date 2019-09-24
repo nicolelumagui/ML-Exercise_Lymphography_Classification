@@ -80,8 +80,7 @@ import warnings
 warnings.filterwarnings('ignore')
 ```
 
-    C:\Users\Mystycalpha\Anaconda3\lib\site-packages\sklearn\externals\six.py:31: DeprecationWarning: The module is deprecated in version 0.21 and will be removed in version 0.23 since we've dropped support for Python 2.7. Please rely on the official version of six (https://pypi.org/project/six/).
-      "(https://pypi.org/project/six/).", DeprecationWarning)
+
     
 
 ## Load the Dataset
@@ -111,20 +110,7 @@ df.head()
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -263,7 +249,7 @@ df.head()
     </tr>
   </tbody>
 </table>
-</div>
+
 
 
 
@@ -277,20 +263,7 @@ df.describe()
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -495,7 +468,7 @@ df.describe()
     </tr>
   </tbody>
 </table>
-</div>
+
 
 
 
@@ -585,20 +558,7 @@ df_train.head()
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -737,7 +697,7 @@ df_train.head()
     </tr>
   </tbody>
 </table>
-</div>
+
 
 
 
@@ -775,20 +735,7 @@ df_train_up.head()
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -927,7 +874,7 @@ df_train_up.head()
     </tr>
   </tbody>
 </table>
-</div>
+
 
 
 
@@ -1109,11 +1056,11 @@ confmatrix(knn_pred_up, "Confusion Matrix\nKNN - Upsampled Training Set")
 ```
 
 
-![png](output_39_0.png)
+![png](Images/output_39_0.png)
 
 
 
-![png](output_39_1.png)
+![png](Images/output_39_1.png)
 
 
 If we observed the confusion matrices above, we can see that the KNN model that used the upsampled data predicted the minority classes (classes 1 and 4) well.
@@ -1242,11 +1189,11 @@ confmatrix(dtree_pred_up, "Confusion Matrix\nDTree - Upsampled Training Set")
 ```
 
 
-![png](output_53_0.png)
+![png](Images/output_53_0.png)
 
 
 
-![png](output_53_1.png)
+![png](Images/output_53_1.png)
 
 
 As expected, *dtree_up* predicted classes 1 and 4 better than *dtree*.
@@ -1294,20 +1241,7 @@ df_feature_importance_merged.sort_values(["Regular-Importance"],ascending=False)
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1409,7 +1343,7 @@ df_feature_importance_merged.sort_values(["Regular-Importance"],ascending=False)
     </tr>
   </tbody>
 </table>
-</div>
+
 
 
 
@@ -1434,20 +1368,7 @@ df_top_features
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1587,7 +1508,7 @@ df_top_features
     </tr>
   </tbody>
 </table>
-</div>
+
 
 
 
@@ -1627,7 +1548,7 @@ Image(graph.create_png())
 
 
 
-![png](output_63_1.png)
+![png](Images/output_63_1.png)
 
 
 
@@ -1661,7 +1582,7 @@ Image(graph.create_png())
 
 
 
-![png](output_64_1.png)
+![png](Images/output_64_1.png)
 
 
 
@@ -1780,11 +1701,11 @@ confmatrix(rf_pred_up, "Confusion Matrix\nRandom Forest - Upsampled Training Set
 ```
 
 
-![png](output_76_0.png)
+![png](Images/output_76_0.png)
 
 
 
-![png](output_76_1.png)
+![png](Images/output_76_1.png)
 
 
 When it comes to classifying the minority classes, the Random Forest model fit in upsampled data did not perform better than the previous models.
@@ -1816,20 +1737,7 @@ df_results
 
 
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1860,7 +1768,7 @@ df_results
     </tr>
   </tbody>
 </table>
-</div>
+
 
 
 
